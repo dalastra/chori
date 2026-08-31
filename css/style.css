@@ -28,7 +28,7 @@ section { position: relative; }
   color: var(--branco); transition: .35s var(--ease);
 }
 .site-header.scrolled { height: 68px; background: rgba(3,74,120,.96); backdrop-filter: blur(10px); box-shadow: 0 8px 25px rgba(0,0,0,.12); }
-.brand { font-family: "Bebas Neue", sans-serif; font-size: 3rem; line-height: 1; letter-spacing: .03em; }
+.brand { width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; }
 .desktop-nav { display: flex; align-items: center; justify-content: center; gap: clamp(15px, 2vw, 32px); margin-left: auto; }
 .desktop-nav a, .header-cta { font-size: .72rem; font-weight: 700; letter-spacing: .11em; transition: .25s; }
 .desktop-nav a:hover { color: var(--amarelo); }
