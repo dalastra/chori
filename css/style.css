@@ -163,7 +163,7 @@ em { font-style: normal; color: var(--amarelo); }
 .final-cta p { font-size: 1.1rem; margin-bottom: 30px; }
 .button-large { min-height: 60px; padding: 0 35px; }
 
-footer { background: var(--preto); color: white; padding: 55px 7vw; display: grid; grid-template-columns: 1fr auto; gap: 30px; align-items: end; }
+footer { background: #253b4b; color: white; padding: 55px 7vw; display: grid; grid-template-columns: 1fr auto; gap: 30px; align-items: end; }
 footer .brand { font-size: 3.7rem; }
 footer p { font-size: .7rem; letter-spacing: .13em; opacity: .7; margin-top: 5px; }
 .footer-links { display: flex; gap: 24px; font-size: .72rem; text-transform: uppercase; letter-spacing: .1em; }
@@ -267,4 +267,817 @@ footer small { grid-column: 1 / -1; opacity: .45; font-size: .65rem; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — AJUSTES GERAIS
+   ========================================================= */
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  min-width: 320px;
+}
+
+main,
+section,
+header,
+footer {
+  max-width: 100%;
+}
+
+h1, h2, h3, p, a, span, small {
+  overflow-wrap: break-word;
+}
+
+.button {
+  max-width: 100%;
+}
+
+/* Tablets / notebooks menores */
+@media (max-width: 1100px) {
+  .site-header {
+    padding-inline: 4vw;
+    gap: 24px;
+  }
+
+  .desktop-nav {
+    gap: 16px;
+  }
+
+  .hero-copy {
+    padding-inline: 4vw;
+  }
+
+  .hero-art {
+    padding-inline: 2vw 5vw;
+  }
+
+  .hero-art img {
+    width: min(42vw, 540px);
+    height: min(68vh, 620px);
+  }
+
+  .about,
+  .feature,
+  .location {
+    gap: 5vw;
+  }
+
+  .about {
+    padding-inline: 6vw;
+  }
+
+  .specialties {
+    padding-inline: 5vw;
+  }
+
+  .feature {
+    padding-inline: 6vw;
+  }
+
+  .experience {
+    padding-inline: 6vw;
+  }
+
+  .location {
+    padding-inline: 6vw;
+  }
+}
+
+/* Celular e tablet em modo retrato */
+@media (max-width: 768px) {
+  .site-header {
+    height: 70px;
+    padding: 0 5vw;
+  }
+
+  .site-header.scrolled {
+    height: 64px;
+  }
+
+  .brand {
+    width: 44px;
+    height: 44px;
+  }
+
+  .menu-toggle {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-shrink: 0;
+  }
+
+  .mobile-menu {
+    z-index: 49;
+    padding: 90px 0 30px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .mobile-menu nav {
+    width: min(86%, 520px);
+    max-height: calc(100svh - 110px);
+    overflow-y: auto;
+    gap: 10px;
+  }
+
+  .mobile-menu a {
+    font-size: clamp(2.25rem, 10vw, 4rem);
+    line-height: .95;
+    padding: 10px 0;
+  }
+
+  .mobile-menu .mobile-order {
+    font-size: 1.05rem;
+    padding-top: 16px;
+  }
+
+  /* HERO */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .hero-copy {
+    width: 100%;
+    padding: 120px 7vw 45px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.65rem, 16vw, 6.8rem);
+    line-height: .82;
+    max-width: 100%;
+    margin: 18px 0 22px;
+  }
+
+  .hero p {
+    max-width: 100%;
+    font-size: .95rem;
+    line-height: 1.65;
+  }
+
+  .hero-actions {
+    width: 100%;
+  }
+
+  .hero-actions .button {
+    flex: 1 1 180px;
+  }
+
+  .scribbles {
+    gap: 12px 18px;
+    margin-top: 30px;
+  }
+
+  .hero-art {
+    width: 100%;
+    min-height: 500px;
+    padding: 15px 9vw 75px;
+    overflow: hidden;
+  }
+
+  .hero-art img {
+    width: min(82vw, 500px);
+    height: min(112vw, 460px);
+    max-height: 460px;
+    border-width: 8px;
+  }
+
+  .hero-circle {
+    width: min(82vw, 500px);
+  }
+
+  .hero-note {
+    right: 3vw;
+    top: 13%;
+    font-size: clamp(1.05rem, 4vw, 1.5rem);
+  }
+
+  .stamp {
+    left: 2vw;
+    bottom: 12%;
+    width: 88px;
+    height: 88px;
+    font-size: .9rem;
+  }
+
+  .flower {
+    font-size: 2.2rem;
+  }
+
+  .flower-one {
+    top: 8%;
+    left: 3%;
+  }
+
+  .flower-two {
+    right: 3%;
+    bottom: 6%;
+  }
+
+  /* SOBRE */
+  .about {
+    display: flex;
+    flex-direction: column;
+    padding: 80px 7vw;
+    gap: 50px;
+    align-items: stretch;
+  }
+
+  .about-photo {
+    width: 100%;
+  }
+
+  .about-photo img {
+    width: 100%;
+    height: min(118vw, 470px);
+    max-height: 470px;
+  }
+
+  .vertical-label {
+    left: -12px;
+    bottom: 35px;
+    font-size: .72rem;
+    padding: 7px 11px;
+  }
+
+  .about-copy {
+    width: 100%;
+  }
+
+  .about h2,
+  .section-heading h2,
+  .experience h2,
+  .gallery h2,
+  .location h2 {
+    font-size: clamp(3.8rem, 15.5vw, 6rem);
+    line-height: .82;
+    margin: 18px 0 26px;
+  }
+
+  .about-copy > p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .quote {
+    max-width: 100%;
+    font-size: 1.2rem;
+    margin-top: 32px;
+  }
+
+  .big-number {
+    right: -2vw;
+    bottom: -12px;
+    font-size: clamp(7rem, 30vw, 10rem);
+  }
+
+  /* CARDÁPIO */
+  .specialties {
+    padding: 80px 7vw;
+  }
+
+  .section-heading {
+    margin-bottom: 45px;
+  }
+
+  .specialty-grid {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .poster-offset {
+    margin-top: 0;
+  }
+
+  .poster-image {
+    width: 100%;
+  }
+
+  .poster-image img {
+    width: 100%;
+    height: min(120vw, 470px);
+    max-height: 470px;
+  }
+
+  .card-link {
+    opacity: 1;
+    transform: none;
+    bottom: 12px;
+    right: 12px;
+  }
+
+  .poster-body h3 {
+    font-size: clamp(2.2rem, 9vw, 2.8rem);
+  }
+
+  .poster-body p {
+    max-width: 100%;
+  }
+
+  /* DESTAQUE */
+  .feature {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    padding: 80px 7vw 100px;
+    gap: 45px;
+  }
+
+  .feature-copy {
+    width: 100%;
+  }
+
+  .feature-copy h2 {
+    font-size: clamp(3.9rem, 15.5vw, 6.5rem);
+    line-height: .8;
+  }
+
+  .feature-copy h2 + h2 {
+    margin-top: 42px;
+  }
+
+  .feature-image {
+    width: 100%;
+  }
+
+  .feature-image img {
+    width: calc(100% - 12px);
+    max-width: 520px;
+    height: min(120vw, 480px);
+    margin: 0 auto;
+    border-width: 8px;
+  }
+
+  .round-note {
+    right: -2%;
+    bottom: 5%;
+    width: 105px;
+    height: 105px;
+    font-size: .9rem;
+  }
+
+  .feature-star {
+    top: 1%;
+    right: 2%;
+    font-size: 4.5rem;
+  }
+
+  .feature-flower {
+    bottom: 2%;
+    left: 2%;
+    font-size: 4rem;
+  }
+
+  /* EXPERIÊNCIA */
+  .experience {
+    padding: 80px 7vw;
+  }
+
+  .collage {
+    width: 100%;
+    min-height: 930px;
+    margin-top: 20px;
+  }
+
+  .collage-item {
+    border-width: 6px;
+  }
+
+  .item-a {
+    width: 67%;
+    height: 390px;
+    left: 0;
+    top: 55px;
+  }
+
+  .item-b {
+    width: 52%;
+    height: 245px;
+    left: auto;
+    right: 0;
+    top: 0;
+  }
+
+  .item-c {
+    width: 62%;
+    height: 330px;
+    right: 0;
+    top: 405px;
+  }
+
+  .item-d {
+    width: 55%;
+    height: 235px;
+    left: 2%;
+    bottom: 20px;
+  }
+
+  .collage-item figcaption {
+    left: 8px;
+    bottom: 7px;
+    font-size: 1rem;
+  }
+
+  .word-a {
+    top: 350px;
+    left: 3%;
+    right: auto;
+    font-size: clamp(1.8rem, 7vw, 3.5rem);
+  }
+
+  .word-b {
+    right: 0;
+    bottom: 0;
+    font-size: clamp(1.8rem, 7vw, 3.5rem);
+  }
+
+  /* GALERIA */
+  .gallery {
+    padding: 80px 0 90px;
+  }
+
+  .gallery-top {
+    padding: 0 7vw;
+    margin-bottom: 30px;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .gallery-top > div:first-child {
+    min-width: 0;
+  }
+
+  .gallery-controls {
+    flex-shrink: 0;
+  }
+
+  .gallery-controls button {
+    width: 44px;
+    height: 44px;
+  }
+
+  .gallery-track {
+    gap: 16px;
+    padding: 0 7vw 12px;
+    touch-action: pan-x;
+  }
+
+  .gallery-card {
+    min-width: 82vw;
+    width: 82vw;
+  }
+
+  .gallery-card img {
+    width: 100%;
+    height: min(100vw, 430px);
+    max-height: 430px;
+  }
+
+  .gallery-card > div {
+    padding: 55px 14px 14px;
+    gap: 10px;
+  }
+
+  .gallery-card strong {
+    font-size: clamp(1.25rem, 5vw, 1.6rem);
+  }
+
+  .gallery-card span {
+    font-size: 1.2rem;
+  }
+
+  /* LOCALIZAÇÃO */
+  .location {
+    grid-template-columns: 1fr;
+    padding: 80px 7vw;
+    gap: 45px;
+  }
+
+  .address {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .location-actions {
+    gap: 18px;
+  }
+
+  .location-actions .button {
+    width: 100%;
+  }
+
+  .social-link {
+    display: inline-block;
+  }
+
+  .map-card {
+    width: 100%;
+    height: min(95vw, 400px);
+    min-height: 300px;
+    border-width: 6px;
+  }
+
+  .map-pin {
+    padding: 13px 18px;
+    font-size: 1.7rem;
+    box-shadow: 6px 6px 0 var(--preto);
+  }
+
+  /* CTA */
+  .final-cta {
+    min-height: 560px;
+    padding: 80px 7vw;
+  }
+
+  .final-cta h2 {
+    font-size: clamp(4.5rem, 20vw, 8rem);
+    line-height: .8;
+  }
+
+  .final-cta p {
+    font-size: 1rem;
+  }
+
+  .button-large {
+    min-height: 56px;
+    width: 100%;
+    padding-inline: 22px;
+  }
+
+  /* FOOTER */
+  footer {
+    grid-template-columns: 1fr;
+    padding: 45px 7vw;
+    gap: 28px;
+    align-items: start;
+  }
+
+  footer .brand {
+    width: 52px;
+    height: 52px;
+  }
+
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    font-size: .7rem;
+  }
+
+  footer small {
+    grid-column: auto;
+    line-height: 1.5;
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+  .site-header {
+    padding-inline: 4.5vw;
+  }
+
+  .brand {
+    width: 40px;
+    height: 40px;
+  }
+
+  .hero-copy {
+    padding: 108px 6vw 38px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.25rem, 16.8vw, 5.2rem);
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+    flex-basis: auto;
+  }
+
+  .scribbles {
+    font-size: .8rem;
+    gap: 10px 15px;
+  }
+
+  .hero-art {
+    min-height: 430px;
+    padding-inline: 7vw;
+    padding-bottom: 65px;
+  }
+
+  .hero-art img {
+    width: 84vw;
+    height: 370px;
+    border-width: 7px;
+  }
+
+  .hero-circle {
+    width: 82vw;
+  }
+
+  .hero-note {
+    top: 10%;
+    right: 2%;
+    font-size: 1rem;
+  }
+
+  .stamp {
+    width: 78px;
+    height: 78px;
+    font-size: .78rem;
+  }
+
+  .about,
+  .specialties,
+  .feature,
+  .experience,
+  .location {
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+
+  .about {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .about-photo img,
+  .poster-image img,
+  .feature-image img {
+    height: 390px;
+  }
+
+  .about h2,
+  .section-heading h2,
+  .experience h2,
+  .gallery h2,
+  .location h2 {
+    font-size: clamp(3.35rem, 15.8vw, 5rem);
+  }
+
+  .quote {
+    font-size: 1.05rem;
+    padding: 14px 16px;
+  }
+
+  .specialties,
+  .feature,
+  .experience,
+  .location {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .poster-body {
+    padding-top: 16px;
+  }
+
+  .poster-body h3 {
+    font-size: 2.15rem;
+  }
+
+  .feature-copy h2 {
+    font-size: clamp(3.35rem, 15.8vw, 5.5rem);
+  }
+
+  .feature-copy h2 + h2 {
+    margin-top: 35px;
+  }
+
+  .round-note {
+    width: 88px;
+    height: 88px;
+    font-size: .78rem;
+  }
+
+  .feature-star {
+    font-size: 3.5rem;
+  }
+
+  .feature-flower {
+    font-size: 3.2rem;
+  }
+
+  .collage {
+    min-height: 780px;
+  }
+
+  .item-a {
+    width: 69%;
+    height: 315px;
+    top: 45px;
+  }
+
+  .item-b {
+    width: 54%;
+    height: 205px;
+  }
+
+  .item-c {
+    width: 64%;
+    height: 270px;
+    top: 325px;
+  }
+
+  .item-d {
+    width: 57%;
+    height: 205px;
+    bottom: 10px;
+  }
+
+  .word-a {
+    top: 285px;
+  }
+
+  .word-b {
+    bottom: -2px;
+  }
+
+  .gallery-top {
+    align-items: flex-end;
+  }
+
+  .gallery-controls button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .gallery-track {
+    gap: 12px;
+    padding-inline: 6vw;
+  }
+
+  .gallery-card {
+    min-width: 88vw;
+    width: 88vw;
+  }
+
+  .gallery-card img {
+    height: 340px;
+  }
+
+  .map-card {
+    height: 310px;
+    min-height: 0;
+  }
+
+  .map-pin {
+    font-size: 1.45rem;
+  }
+
+  .map-label {
+    font-size: 1.05rem;
+  }
+
+  .final-cta {
+    min-height: 520px;
+    padding-inline: 6vw;
+  }
+
+  .final-cta h2 {
+    font-size: clamp(4.1rem, 19vw, 6.5rem);
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Evita que elementos decorativos/rotações criem overflow lateral */
+@media (max-width: 768px) {
+  .hero-art img,
+  .feature-image img,
+  .collage-item {
+    max-width: 100%;
+  }
+
+  .round-note {
+    right: 0;
+  }
+
+  .vertical-label {
+    max-width: 150px;
+  }
+}
+
+/* Acessibilidade: remove efeitos de movimento quando solicitado */
+@media (prefers-reduced-motion: reduce) {
+  .hero-art img,
+  .poster-card,
+  .gallery-card img,
+  .collage-item img {
+    transform: none !important;
+  }
 }
